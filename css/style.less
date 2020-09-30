@@ -1,0 +1,292 @@
+@red-enrage: #AE1F23;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+.container{
+    width: 100%;
+    max-width: 1170px;
+    margin: auto;
+}
+/**Header**/
+header{
+    width: 100%;
+    height: 100px;
+    background-color: @red-enrage;
+}
+.logo{
+    padding: 25px 0;
+}
+.logo img{
+    height: 50px;
+    display: block;
+    margin: auto;
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 450px;
+    margin: 10px auto;
+}
+.menu a{
+    padding: 10px;
+    text-decoration: none;
+    color: #231F20;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+.menu a:hover{
+    color:white;
+    background-color: #231F20;
+    border-bottom: 2px solid #AE1F23;
+}
+/**Banner Main**/
+.banner{
+    margin-top: 50px;
+    width: 100%;
+    height: 500px;
+    background-image: url(../img/banner.JPG);
+    background-size: cover;
+}
+.banner > div{
+    width: 100%;
+    height: 100%;
+    background-color: rgba( 0, 0, 0, 0.5);
+}
+.call-action{
+    text-align: center;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+.call-action h2{
+    font-size: 40px;
+    font-weight: 100;
+    color: white;
+    text-transform: uppercase;
+    width: 100%;
+    max-width: 470px;
+}
+.call-action a{
+    font-size: 18px;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px 50px;
+    text-decoration: none;
+    background-color: rgba( 174, 31, 35, 0.8);
+    border-radius: 50px;
+    margin-top: 35px;
+}
+.call-action a:hover{
+    background-color: #231F20;
+    color: #AE1F23;
+}
+/**Welcome Section**/
+.welcome{
+    width: 100%;
+    color: white;
+    text-align: center; 
+    background: rgba(174,31,35,1);
+    background: -moz-linear-gradient(top, rgba(174,31,35,1) 0%, rgba(174,31,35,1) 51%, rgba(0,0,0,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(174,31,35,1)), color-stop(51%, rgba(174,31,35,1)), color-stop(100%, rgba(0,0,0,1)));
+    background: -webkit-linear-gradient(top, rgba(174,31,35,1) 0%, rgba(174,31,35,1) 51%, rgba(0,0,0,1) 100%);
+    background: -o-linear-gradient(top, rgba(174,31,35,1) 0%, rgba(174,31,35,1) 51%, rgba(0,0,0,1) 100%);
+    background: -ms-linear-gradient(top, rgba(174,31,35,1) 0%, rgba(174,31,35,1) 51%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(to bottom, rgba(174,31,35,1) 0%, rgba(174,31,35,1) 51%, rgba(0,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ae1f23', endColorstr='#000000', GradientType=0 );
+}
+.welcome > div{
+    background-color: rgba( 0, 0, 0, 0.5);
+}
+.welcome h3{
+    font-size: 18px;
+    padding-top: 45px;
+    padding-bottom: 35px;
+}
+.welcome p{
+    font-size: 16px;
+    padding-bottom: 35px;
+    line-height: 1.7em;
+    max-width: 370px;
+    margin: 0 auto;
+}
+/**About US**/
+.us{
+    padding-bottom: 80px;
+}
+.us > .container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.lightbox{
+    width: 100%;
+    max-width: 570px;    
+    background-image: url('../img/enrage.jpg');
+    background-size: cover;
+    border: 5px solid black;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.overlay{
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(black, 40%);
+    border-radius: 50px;
+    position: relative;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    p{
+        color: white;
+        font-size: 50px;
+        text-align: center;
+        padding-top: 20%;
+    }
+}
+.overlay:hover{
+    opacity: 1;
+}
+.conocenos{
+    text-align: center;
+    padding: 15px 0px;
+    max-width: 570px;
+}
+.conocenos p:nth-child(1){
+    font-size: 30px;
+    color: black;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+}
+.conocenos h3{
+    padding-top: 20px;
+    padding-bottom: 30px;
+    color:#AE1F23;
+    font-size: 18px;
+}
+.conocenos p:nth-child(3){
+    font-size: 14px;
+    color: black;
+    padding-bottom: 25px;
+}
+.conocenos p:nth-child(4){
+    font-size: 14px;
+    color: black;
+    padding-bottom: 20px;
+}
+.conocenos a{
+    font-size: 15px;
+    color:#AE1F23;
+}
+@media all and (min-width:769px){
+    .us{
+        padding-top: 80px;
+    }
+    .img-team{
+        margin-right: 25px;
+    }
+    .conocenos{
+        padding-left: 25px;
+        text-align: left;
+    }
+}
+/**Productos**/
+.products{
+    background-color: @red-enrage;
+    padding: 5.625rem 0;
+    .container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        .col{
+            width: 50%;
+            &.izq{
+                box-shadow: 0px 9px 32px -1px rgba(0,0,0,0.5);
+                overflow: hidden;
+            }
+            .titulo-section{
+                padding: 3.125rem;
+                padding-right: 0;
+                h2{
+                    color:white;
+                }
+                p{
+                    color: fade(white,70%);
+                    padding-bottom: 1.125rem;
+                    font-size: 1.125rem;
+                    line-height: 1.75;
+                    &.last-child{
+                        padding-bottom: 0;
+                    }
+                }
+            }
+            .slider{
+                width: 400%;
+                display: flex;
+                .slide{
+                    width: 100%;
+                    min-height: 400px;
+                    background-size: cover;
+                    background-position: center;
+                    &.foto1{
+                        background-image: url('../img/slider/img_1.JPG');
+                    }
+                    &.foto2{
+                        background-image: url('../img/slider/img_2.JPG');
+                    }
+                    &.foto3{
+                        background-image: url('../img/slider/img_3.JPG');
+                    }
+                    &.foto4{
+                        background-image: url('../img/slider/img_4.JPG');
+                    }
+                }
+            }
+        }
+    }
+}
+/**Footer**/
+.bot-footer{
+    background-color: #231F20;
+    height: 30px;
+    color: white;
+}
+.bot-footer p{
+    font-size: 16px;
+    text-align: center;
+    padding-top: 5px;
+}
+/*---Efecto Lightbox---*/
+.img-modal{
+    width: 90%;
+    max-width: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transition: opacity .3s ease;
+    -o-transition: opacity .3s ease;
+    transition: opacitu .3s east;
+    +i{
+        position: absolute;
+        top: 2%;
+        right: 1%;
+        color: black;
+        font-size: 2.25rem;
+        background: white;
+        display: inline-block;
+        padding: 0.75rem 0.75rem;
+        cursor: pointer;
+    }
+}
