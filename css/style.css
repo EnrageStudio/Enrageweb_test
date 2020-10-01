@@ -255,6 +255,86 @@ header {
 .products .container .col .slider .slide.foto4 {
   background-image: url('../img/slider/img_4.JPG');
 }
+/**Servicios**/
+.services {
+  padding: 5.625rem 0;
+}
+.services .container .titulo h2 {
+  color: #AE1F23;
+  text-align: center;
+}
+.services .container .container-menu {
+  margin-top: 2.5rem;
+}
+.services .container .container-menu .encabezado {
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+.services .container .container-menu .encabezado li a {
+  font-size: 0.75rem;
+  padding: 0 1.4375rem 1.125rem 1.4375rem;
+  display: block;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+  text-decoration: none;
+  color: black;
+}
+.services .container .container-menu .encabezado li a:hover {
+  color: #AE1F23;
+}
+.services .container .container-menu .encabezado li.active a {
+  color: #AE1F23;
+  border-bottom: 2px solid #AE1F23;
+}
+.services .container .container-menu .contenido {
+  max-width: 50rem;
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  border: 6px double #AE1F23;
+  padding: 0 2.25rem;
+}
+.services .container .container-menu .contenido > div {
+  display: none;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.services .container .container-menu .contenido .active {
+  display: block;
+}
+.services .container .container-menu .contenido .item {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 2.25rem 0;
+  border-bottom: 1px solid #AE1F23;
+}
+.services .container .container-menu .contenido .item .col-izq {
+  width: 70%;
+}
+.services .container .container-menu .contenido .item .col-izq h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 0.625rem;
+}
+.services .container .container-menu .contenido .item .col-izq p {
+  font-size: 3rem;
+  color: #777;
+}
+.services .container .container-menu .contenido .item .col-der {
+  width: 30%;
+  text-align: center;
+  font-size: 2.1875rem;
+}
 /**Footer**/
 .bot-footer {
   background-color: #231F20;

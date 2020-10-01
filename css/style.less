@@ -256,16 +256,104 @@ header{
         }
     }
 }
+/**Servicios**/
+.services{
+    padding: 5.625rem 0;
+    .container{
+        .titulo{
+            h2{
+                color: @red-enrage;
+                text-align: center;
+            }
+        }
+        .container-menu{
+            margin-top: 2.5rem;
+            .encabezado{
+                font-weight: 600;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                text-decoration: none;
+                li{
+                    a{
+                        font-size: 0.75rem;
+                        padding: 0 1.4375rem 1.125rem 1.4375rem;
+                        display: block;
+                        cursor: pointer;
+                        -webkit-transition: all .3s ease;
+                        -o-transition: all .3s ease;
+                        transition: all .3s ease;
+                        border-bottom: 2px solid transparent;
+                        text-decoration: none;
+                        color: black;
+                        &:hover{
+                            color: @red-enrage;
+                        }
+                    }
+                    &.active{
+                        a{
+                            color:@red-enrage;
+                            border-bottom: 2px solid @red-enrage;
+                        }
+                    }
+                }
+            }
+            .contenido{
+                max-width: 50rem;
+                margin: 0 auto;
+                margin-top: 2.5rem;
+                border: 6px double @red-enrage;
+                padding: 0 2.25rem;
+                >div{
+                    display: none;
+                    -webkit-transition: all .3s ease;
+                    -o-transition: all .3s ease;
+                    transition: all .3s ease;
+                }
+                .active{
+                    display: block;
+                }
+                .item{
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    padding: 2.25rem 0;
+                    border-bottom: 1px solid @red-enrage;
+                    .col-izq{
+                        width: 70%;
+                        h3{
+                            font-size: 1.5rem;
+                            font-weight: 400;
+                            margin-bottom: 0.625rem;
+                        }
+                        p{
+                            font-size: 3rem;
+                            color: #777
+                        }
+                    }
+                    .col-der{
+                        width: 30%;
+                        text-align: center;
+                        font-size: 2.1875rem;
+                    }
+                }
+            }
+        }
+    }
+}
 /**Footer**/
 .bot-footer{
     background-color: #231F20;
     height: 30px;
     color: white;
-}
-.bot-footer p{
-    font-size: 16px;
-    text-align: center;
-    padding-top: 5px;
+    p{
+        font-size: 16px;
+        text-align: center;
+        padding-top: 5px;
+    }
 }
 /*---Efecto Lightbox---*/
 .img-modal{
