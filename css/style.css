@@ -4,50 +4,52 @@
   padding: 0;
 }
 body {
-  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
 }
 .container {
   width: 100%;
   max-width: 1170px;
   margin: auto;
 }
+img {
+  vertical-align: top;
+}
 /**Header**/
-header {
-  width: 100%;
-  height: 100px;
+header .menu-main {
   background-color: #AE1F23;
-}
-.logo {
-  padding: 25px 0;
-}
-.logo img {
-  height: 50px;
-  display: block;
-  margin: auto;
-}
-.menu {
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  padding: 0 2.25rem;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-between;
-  max-width: 450px;
-  margin: 10px auto;
+  align-items: center;
+  min-width: 94px;
+  border-bottom: 1px solid #231F20;
 }
-.menu a {
-  padding: 10px;
+header .menu-main .logo {
+  max-width: 3.125rem;
+  padding: 0.5625rem;
+}
+header .menu-main .logo img {
+  max-height: 50px;
+}
+header .menu-main .menu a {
+  padding: 0.625rem;
   text-decoration: none;
   color: #231F20;
   text-transform: uppercase;
-  font-size: 16px;
 }
-.menu a:hover {
+header .menu-main .menu a:hover {
   color: white;
   background-color: #231F20;
-  border-bottom: 2px solid #AE1F23;
+  border-bottom: 2px solid white;
 }
 /**Banner Main**/
 .banner {
-  margin-top: 50px;
   width: 100%;
   height: 500px;
   background-image: url(../img/banner.JPG);
@@ -87,35 +89,6 @@ header {
 .call-action a:hover {
   background-color: #231F20;
   color: #AE1F23;
-}
-/**Welcome Section**/
-.welcome {
-  width: 100%;
-  color: white;
-  text-align: center;
-  background: #ae1f23;
-  background: -moz-linear-gradient(top, #ae1f23 0%, #ae1f23 51%, #000000 100%);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, #ae1f23), color-stop(51%, #ae1f23), color-stop(100%, #000000));
-  background: -webkit-linear-gradient(top, #ae1f23 0%, #ae1f23 51%, #000000 100%);
-  background: -o-linear-gradient(top, #ae1f23 0%, #ae1f23 51%, #000000 100%);
-  background: -ms-linear-gradient(top, #ae1f23 0%, #ae1f23 51%, #000000 100%);
-  background: linear-gradient(to bottom, #ae1f23 0%, #ae1f23 51%, #000000 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ae1f23', endColorstr='#000000', GradientType=0);
-}
-.welcome > div {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.welcome h3 {
-  font-size: 18px;
-  padding-top: 45px;
-  padding-bottom: 35px;
-}
-.welcome p {
-  font-size: 16px;
-  padding-bottom: 35px;
-  line-height: 1.7em;
-  max-width: 370px;
-  margin: 0 auto;
 }
 /**About US**/
 .us {
@@ -339,9 +312,11 @@ header {
 .bot-footer {
   background-color: #231F20;
   height: 30px;
-  color: white;
+  text-align: center;
 }
-.bot-footer p {
+.bot-footer a {
+  text-decoration: none;
+  color: white;
   font-size: 16px;
   text-align: center;
   padding-top: 5px;
