@@ -23,6 +23,13 @@
             for(var i = 0; i < propTabs.divs_cont.length; i++){
                 propTabs.divs_cont[i].className = '';
             }
+            this.parentElement.className = 'active';
+            propTabs.cont_act = this.getAttribute('href');
+            document.querySelector(propTabs.cont_act).className = 'active';
+            document.querySelector(propTabs.cont_act).style.opacity = 0;
+            setTimeout(function(){
+                document.querySelector(propTabs.cont_act).style.opacity = 1;
+            }, 100);
         }
     }
     metTabs.inicio();
