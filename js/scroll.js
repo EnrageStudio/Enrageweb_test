@@ -3,9 +3,9 @@
         posicion: window.pageYOffset,
         scroll_suave: document.getElementsByClassName('scroll-m'),
         volver_arriba: document.getElementsByClassName('scroll-u'),
-        destino = null,
-        seccion_distancia = null,
-        intervalo = null
+        destino: null,
+        seccion_distancia: null,
+        intervalo: null
     }
     var metScroll = {
         inicio: function(){
@@ -19,7 +19,7 @@
         moverse: function(e){
             e.preventDefault();
             propScroll.destino = this.getAttribute('href');
-            propScroll.seccion_distancia = document.querySelector(propScroll.destino).offsetTop - 94;
+            propScroll.seccion_distancia = document.querySelector(propScroll.destino).offsetTop -50;
             propScroll.posicion = window.pageYOffset;
             propScroll.intervalo = setInterval(function(){
                 if (propScroll.posicion < propScroll.seccion_distancia) {
@@ -29,12 +29,14 @@
                     }
                 }else{
                     propScroll.posicion -= 30;
-                    clearInterval(propScroll.intervalo);
+                    if(propScroll.posicion <= propScroll.seccion_distancia){
+                        clearInterval(propScroll.intervalo);
+                    }
                 }
                 window.scrollTo(0, propScroll.posicion);
             }, 15);
         },
-        subir: function(){
+        subir: function(e){
             e.preventDefault();
             clearInterval(propScroll.intervalo);
             propScroll.posicion = window.pageYOffset;
@@ -52,5 +54,4 @@
         }
     }
     metScroll.inicio();
-
-})
+}())
