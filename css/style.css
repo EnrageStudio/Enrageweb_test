@@ -103,9 +103,9 @@ header .menu-main .menu a:hover {
 .lightbox {
   width: 100%;
   max-width: 570px;
-  background-image: url(../img/goku.jpg);
+  background-image: url('../img/goku.jpg');
   background-size: cover;
-  border: 5px solid black;
+  border: 5px solid #231F20;
   border-radius: 50px;
   cursor: pointer;
 }
