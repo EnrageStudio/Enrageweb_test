@@ -18,6 +18,7 @@
         },
         moverse: function(e){
             e.preventDefault();
+            clearInterval(propScroll.intervalo);
             propScroll.destino = this.getAttribute('href');
             propScroll.seccion_distancia = document.querySelector(propScroll.destino).offsetTop -50;
             propScroll.posicion = window.pageYOffset;
